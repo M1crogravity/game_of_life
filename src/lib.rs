@@ -36,8 +36,8 @@ impl Universe {
 
     fn live_neighbors(&self, row: usize, col: usize) -> u8 {
         let mut count = 0;
-        for i in row.checked_sub(1).unwrap_or(0)..(row + 2).min(24) {
-            for j in col.checked_sub(1).unwrap_or(0)..(col + 2).min(24) {
+        for i in row.checked_sub(1).unwrap_or(0)..(row + 2).min(25) {
+            for j in col.checked_sub(1).unwrap_or(0)..(col + 2).min(25) {
                 if i == row && j == col {
                     continue;
                 }
